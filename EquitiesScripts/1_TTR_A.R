@@ -12,11 +12,14 @@ library(quantmod)
 library(dygraphs)
 library(htmltools)
 
-## Get historical stock pricing
-getSymbols("AAPL", src = "yahoo")
 
 # Get list of all stocks available
-allTickers <- stockSymbols("NYSE") #AMEX, NASDAQ
+allTickers <- stockSymbols("NASDAQ") #AMEX, NASDAQ, NYSE
+idx        <- grep('AAPL', allTickers$Symbol)
+allTickers[idx,]
+
+## Get historical stock pricing
+getSymbols("AAPL", src = "yahoo")
 
 # Review
 head(AAPL)

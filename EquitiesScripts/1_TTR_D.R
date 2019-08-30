@@ -19,25 +19,25 @@ CMG <- CMG['2018-01-01/2018-10-26']
 
 # Manual MACD
 # FAST MA
-#CMGsma12 <- SMA(CMG$CMG.Close, 12)
-#tail(CMGsma12, 10) #462.5525
+CMGsma12 <- SMA(CMG$CMG.Close, 12)
+tail(CMGsma12, 10) 
 
 # SLOW MA
-#CMGsma26 <- SMA(CMG$CMG.Close, 26)
-#tail(CMGsma26, 10) #449.0681
+CMGsma26 <- SMA(CMG$CMG.Close, 26)
+tail(CMGsma26, 10) 
 
 # MA Difference
-#SMAdiff <- CMGsma12 - CMGsma26
-#tail(SMAdiff, 10) #13.484425
-#tail(CMGsma12, 1) - tail(CMGsma26, 1)
+SMAdiff <- CMGsma12 - CMGsma26
+tail(SMAdiff, 10) 
+tail(CMGsma12, 1) - tail(CMGsma26, 1) #same as above
 
 # Another MA of the difference
-#manualSig <- SMA(SMAdiff,9)
+manualSig <- SMA(SMAdiff,9)
 
 # Calculate the moving Avgs with a TTR function
 CMGmacd <- MACD(CMG$CMG.Close,
                 nFast = 12, nSlow = 26, nSig = 9, 
-                maType="SMA", #Usually EMA; not covered
+                maType="SMA", #Usually EMA
                 percent = F) # Values or Percents
 
 # Examine

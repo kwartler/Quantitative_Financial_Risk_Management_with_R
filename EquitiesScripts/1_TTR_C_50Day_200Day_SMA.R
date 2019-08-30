@@ -25,13 +25,13 @@ names(df) <- c('CRMclose', 'sma50', 'sma200')
 
 # Construct a trading rule; 1 = buy or stay in stock, 0 = sell
 # Not discussing shorting a stock (-1)
-df$Lag.1 <- Lag(ifelse(df$sma50 > df$sma200, 1, 0)) 
+df$Lag.1 <- Lag(ifelse(df$sma50 > df$sma200, 1, 0), k = 1) 
 ?Lag
 
 # Examine part1
 df[199:205,]
 # Manually reviewing this section
-#              CRM.Close SMA50    SMA200       Lag.1
+#              CRMclose  SMA50    SMA200       Lag.1
 # 2018-12-19   131.16    136.4284 136.7504     1
 # 2018-12-20   127.73    136.0130 136.7624     0
 # Buy or Retain position :     2018-12-19  
@@ -71,7 +71,7 @@ plot(Cl(CMG))
 getSymbols("CMG")
 CMGma50     <- SMA(CMG$CMG.Close, 50)
 CMGma200    <- SMA(CMG$CMG.Close, 200)
-tradeSignal <- Lag(ifelse(CMGma50 < CMGma200  , 1, 0))
+tradeSignal <- Lag(ifelse(CMGma50 < CMGma200  , 1, 0), k = 1)
 ret         <- ROC(Cl(CMG))*tradeSignal #Rate of Change TTR::ROC()
 
 # Review your return

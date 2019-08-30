@@ -18,7 +18,7 @@ CMG <- CMG['2018-03-01/']
 plot(CMG$CMG.Close)
 
 # Calculate the moving Avgs
-CMGma3 <- SMA(CMG$CMG.Close, 3)
+CMGma3  <- SMA(CMG$CMG.Close, 3)
 CMGma10 <- SMA(CMG$CMG.Close, 10)
 CMGma30 <- SMA(CMG$CMG.Close, 30)
 
