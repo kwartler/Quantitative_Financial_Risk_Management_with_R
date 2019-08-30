@@ -16,7 +16,7 @@ library(htmltools)
 getSymbols("AAPL", src = "yahoo")
 
 # Get list of all stocks available
-#allTickers <- stockSymbols("NYSE") #AMEX, NASDAQ
+allTickers <- stockSymbols("NYSE") #AMEX, NASDAQ
 
 # Review
 head(AAPL)
@@ -30,7 +30,7 @@ oneYr <- AAPL["2017"]
 head(oneYr)
 tail(oneYr)
 
-#Extract data from Jan 17 to May 2018 
+# Extract data from Jan 2017 to May 2018 
 yrToMonth <- AAPL["2017/2018-05"]
 head(yrToMonth)
 tail(yrToMonth)
@@ -45,6 +45,26 @@ upUntil <- AAPL["/2016-12"]
 head(upUntil)
 tail(upUntil)
 
+# Extracting specific columns & simple deltas
+# Closing column only
+head(Cl(AAPL),5)
+
+# Opening price column
+head(Op(AAPL),5)
+
+# High price for the session
+head(Hi(AAPL),5)
+
+# Low price for the session
+head(Lo(AAPL),5)
+
+# Volume for the session
+head(Vo(AAPL),5)
+
+# Simple detlas
+head(OpCl(AAPL),5)
+?Cl
+
 # D3 Viz
 dygraph(AAPL$AAPL.Close)  %>% dyRangeSelector()
 
@@ -52,3 +72,4 @@ candleAAPL <- AAPL[,1:4]
 dygraph(candleAAPL) %>%
   dyCandlestick() %>% dyRangeSelector()
 
+# End
