@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Date: 6-22-2018
+#' Date: 9-2-2019
 #' Purpose: RSI Example
 #' 
 
@@ -19,7 +19,7 @@ AMZN <- AMZN['2018-01-01/2018-06-22']
 
 # Calc RSI
 AMZNrsi <- RSI(AMZN$AMZN.Close,
-               maType="SMA", #Usually EMA
+               maType="SMA", 
                n =14)
 
 tail(AMZNrsi,10)
@@ -53,6 +53,8 @@ browsable(
       dyRangeSelector()
   )
 )
+
+## Back to PPT
 
 # Now compound indicators
 HASmacd    <- MACD(HAS$HAS.Close,

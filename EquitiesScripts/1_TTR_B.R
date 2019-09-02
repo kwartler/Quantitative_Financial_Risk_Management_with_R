@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Date: 6-22-2018
+#' Date: 9-2-2018
 #' Purpose: Simple Moving Avg Example
 #'
 
