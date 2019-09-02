@@ -29,7 +29,8 @@ df$Lag.1 <- Lag(ifelse(df$sma50 > df$sma200, 1, 0), k = 1)
 ?Lag
 
 # Examine part1
-df[199:205,]
+df[199:205,] # row 200 is NA for `Lag.1` due to Lag()
+
 # Manually reviewing this section
 #              CRMclose  SMA50    SMA200       Lag.1
 # 2018-12-19   131.16    136.4284 136.7504     1

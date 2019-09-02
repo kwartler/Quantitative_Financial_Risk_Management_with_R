@@ -12,7 +12,6 @@ library(quantmod)
 library(dygraphs)
 library(htmltools)
 
-
 # Get list of all stocks available
 allTickers <- stockSymbols("NASDAQ") #AMEX, NASDAQ, NYSE
 idx        <- grep('AAPL', allTickers$Symbol)

@@ -25,6 +25,7 @@ df$tradeSig <- Lag(ifelse(df$CMG.Close > df$SMA  , 1, 0)) # not discussing short
 
 
 # Examine
+df[9:12,] # row 10 is NA for Lag.1 due to Lag()
 tail(df,25)
 
 # Manually reviewing this section
@@ -40,7 +41,7 @@ getSymbols("CMG")
 CMG         <- CMG['2018-01-01/']
 CMGma10     <-SMA(CMG$CMG.Close, 10)
 tradeSignal <- Lag(ifelse(CMG$CMG.Close > CMGma10  , 1, 0))
-ret <- ROC(Cl(CMG))*tradeSignal #Rate of Change TTR::ROC()
+ret         <- ROC(Cl(CMG))*tradeSignal #Rate of Change TTR::ROC()
 
 
 # Review your return
