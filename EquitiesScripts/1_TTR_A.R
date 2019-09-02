@@ -1,6 +1,6 @@
 #' Author: Ted Kwartler
-#' Date: 6-22-2018
-#' Purpose: Algo Trading Example
+#' Date: Sept-2019
+#' Purpose: Stock API request & Manipulate a Time Series Object
 #' 
 
 # Opts
@@ -20,6 +20,7 @@ allTickers[idx,]
 
 ## Get historical stock pricing
 getSymbols("AAPL", src = "yahoo")
+#RobjectName <- getSymbols('AAPL',auto.assign=F)
 
 # Review
 head(AAPL)
