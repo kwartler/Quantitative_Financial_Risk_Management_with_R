@@ -12,7 +12,7 @@ library(quantmod)
 library(PerformanceAnalytics)
 
 # Get Salesforce
-getSymbols("CRM")
+getSymbols("CRM") #"CRM_1_TTR_C.rds"
 CRM <- CRM['2018-03-01/2019-06-22'] 
 
 # Calculate moving averages
@@ -69,7 +69,7 @@ charts.PerformanceSummary(ret)
 plot(Cl(CMG))
 
 # Now let's be knight cap and switch a sign!
-getSymbols("CMG")
+getSymbols("CMG") #"CMG_1_TTR_C.rds"
 CMGma50     <- SMA(CMG$CMG.Close, 50)
 CMGma200    <- SMA(CMG$CMG.Close, 200)
 tradeSignal <- Lag(ifelse(CMGma50 < CMGma200  , 1, 0), k = 1)

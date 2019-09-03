@@ -18,7 +18,7 @@ idx        <- grep('AAPL', allTickers$Symbol)
 allTickers[idx,]
 
 ## Get historical stock pricing
-getSymbols("AAPL", src = "yahoo")
+getSymbols("AAPL", src = "yahoo") #"AAPL_1_TTR_A.rds"
 #RobjectName <- getSymbols('AAPL',auto.assign=F)
 
 # Review

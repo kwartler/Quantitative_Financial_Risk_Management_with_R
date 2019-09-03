@@ -11,7 +11,7 @@ library(TTR)
 library(quantmod)
 
 # Get Chipotle
-getSymbols("CMG")
+getSymbols("CMG") #"CMG_1_TTR_B.rds"
 CMG <- CMG['2018-03-01/']
 
 # Plot

@@ -14,7 +14,7 @@ library(dygraphs)
 library(htmltools)
 
 # Get Chipotle
-getSymbols("CMG")
+getSymbols("CMG") #"CMG_1_TTR_D.rds"
 CMG <- CMG['2018-01-01/2018-10-26']
 
 # Manual MACD
