@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Date: Sept-2019
+#' Date: Nov-2019
 #' Purpose: Stock API request & Manipulate a Time Series Object
 #' 
 
@@ -13,9 +13,9 @@ library(dygraphs)
 library(htmltools)
 
 # Get list of all stocks available
-allTickers <- stockSymbols("NASDAQ") #AMEX, NASDAQ, NYSE
-idx        <- grep('AAPL', allTickers$Symbol)
-allTickers[idx,]
+#allTickers <- stockSymbols(exchange = "NYSE") #AMEX, NASDAQ, NYSE
+#idx        <- grep('AAPL', allTickers$Symbol)
+#allTickers[idx,]
 
 ## Get historical stock pricing
 getSymbols("AAPL", src = "yahoo") #"AAPL_1_TTR_A.rds"

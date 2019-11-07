@@ -4,7 +4,7 @@
 #' 
 
 # WD
-setwd("C:/Users/Edward/Desktop/Quantitative_Financial_Risk_Management_with_R/data")
+setwd("/cloud/project/data")
 
 # Libraries
 library(rpart)

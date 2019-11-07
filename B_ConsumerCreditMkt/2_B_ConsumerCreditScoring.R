@@ -15,7 +15,7 @@ library(rbokeh)
 library(MLmetrics)
 
 # Data Directory
-setwd("C:/Users/Edward/Desktop/Quantitative_Financial_Risk_Management_with_R/data")
+setwd("/cloud/project/data")
 
 # Training Data
 originalNotes <- read.csv("20K_sampleLoans.csv")

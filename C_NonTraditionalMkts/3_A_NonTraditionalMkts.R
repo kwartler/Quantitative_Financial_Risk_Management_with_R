@@ -8,12 +8,12 @@ library(triangle)
 library(dplyr)
 
 # Load custom functions
-source('C:/Users/Edward/Desktop/Quantitative_Financial_Risk_Management_with_R/C_NonTraditionalMkts/Z_cardValues.R')
-source('C:/Users/Edward/Desktop/Quantitative_Financial_Risk_Management_with_R/C_NonTraditionalMkts/Z_crackPack.R')
-source('C:/Users/Edward/Desktop/Quantitative_Financial_Risk_Management_with_R/C_NonTraditionalMkts/Z_openBox.R')
+source('/cloud/project/C_NonTraditionalMkts/Z_cardValues.R')
+source('/cloud/project/C_NonTraditionalMkts/Z_crackPack.R')
+source('/cloud/project/C_NonTraditionalMkts/Z_openBox.R')
 
 # Setwd
-setwd("C:/Users/Edward/Desktop/Quantitative_Financial_Risk_Management_with_R/data")
+setwd("/cloud/project/data")
 
 # We will use a CSV but...
 # Use this URL example to get a recent price list for a set
